@@ -1,6 +1,6 @@
-# cool-facts-app
+# About
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a simple app I made to refresh my Vue.js knowledge, it will list interesting facts about the world, using a template, below is the template. Below is the setup instructions from the template README:
 
 ## Recommended IDE Setup
 

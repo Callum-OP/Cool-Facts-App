@@ -4,13 +4,17 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <header>
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/about">About</RouterLink>
+    </nav>
   </header>
 
-  <RouterView />
+  <main>
+    <div class="content">
+      <RouterView />
+    </div>
+  </main>
 </template>
 
 <style scoped>
@@ -41,10 +45,17 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Push page content down */
-:global(body) {
-  margin: 0;
+main {
   padding-top: 60px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
+.content {
+  width: 100%;
+  max-width: 800px;
+}
 </style>

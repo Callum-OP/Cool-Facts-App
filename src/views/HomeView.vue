@@ -31,9 +31,11 @@ export default {
 };
 </script>
 
-<style>
-#container {
+<style scoped>
+.container {
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;

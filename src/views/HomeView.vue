@@ -1,8 +1,13 @@
 <template>
-  <div id="app">
-    <h1>Cool Facts</h1>
-    <button @click="getFact">Show me a fact</button>
-    <p v-if="fact">{{ fact }}</p>
+  <div class="container">
+    <br></br>
+    <div class="text-center">
+      <h1 class="text-5xl font-semibold tracking-tight text-balance text-gray-900 sm:text-7xl">Cool Facts</h1>
+      <div class="mt-10 flex items-center justify-center gap-x-6">
+        <button @click="getFact" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Show me a fact</button>
+      </div>
+      <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8" v-if="fact">{{ fact }}</p>
+    </div>
   </div>
 </template>
 
@@ -27,14 +32,10 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-top: 50px;
-}
-button {
-  padding: 10px 20px;
-  margin: 20px;
-  cursor: pointer;
 }
 </style>

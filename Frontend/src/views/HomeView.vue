@@ -20,6 +20,10 @@ export default {
   },
   methods: {
     async getFact() {
+      fetch("http://localhost:8080/fact")
+        .then(res => res.text())
+        .then(data => this.fact = data);
+
       const facts = [
         "It is said that the term 'bug' in computing came about in 1947 when a moth was found to be the cause of a malfunction in the Harvard Mark II computer, however in reality the term bug was already used by Thomas Edison and other engineers in the 1870s to describe electrical faults as if they were pesky bugs.",
         "Quantum entanglement is when two particles can be linked in such a way that observing the properties of one instantaneously affects the other, regardless of the distance separating them, even if they were across the universe. Einstein called this 'spooky action at a distance'.",

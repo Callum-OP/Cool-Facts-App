@@ -46,7 +46,6 @@ nav a:hover {
 }
 
 main {
-  padding-top: 60px;
   min-height: 100vh;
   display: flex;
   justify-content: center;

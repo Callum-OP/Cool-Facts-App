@@ -6,7 +6,8 @@ import { RouterLink, RouterView } from 'vue-router'
   <header>
     <nav>
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/add">Add New Fact</RouterLink>
+      <RouterLink to="/library">Fact Library</RouterLink>
+      <RouterLink to="/add">Add Fact</RouterLink>
     </nav>
   </header>
 
@@ -50,7 +51,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 .content {

@@ -8,4 +8,5 @@ Frontend:
 npm run dev
 
 # About the app
-It is an app that simply shows the user some cool facts when they click the button.
+It is an app that simply shows the user a random cool fact when they click the button on the home page.
+Users can also go to other pages to add facts as well as view all facts with the option to edit or delete a fact.

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -58,5 +59,14 @@ public class FactsController {
                     return repo.save(existing);
                 })
                 .orElseThrow(() -> new RuntimeException("Fact not found"));
+    }
+
+    // Delete a fact
+    @DeleteMapping("/fact/{id}")
+    public void deleteFact(@PathVariable Long id) {
+        if (!repo.existsById(id)) {
+            throw new RuntimeException("Fact not found");
+        }
+        repo.deleteById(id);
     }
 }

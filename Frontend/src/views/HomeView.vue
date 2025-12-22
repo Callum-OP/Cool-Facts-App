@@ -6,7 +6,7 @@
       <div class="mt-10 flex items-center justify-center gap-x-6">
         <button @click="getFact" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Show me a fact</button>
       </div>
-      <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8" v-if="fact">{{ fact }}</p>
+      <p class="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8" v-if="fact">{{ fact.text }}</p>
     </div>
   </div>
 </template>
@@ -21,7 +21,7 @@ export default {
   methods: {
     async getFact() {
       fetch("http://localhost:8080/fact")
-        .then(res => res.text())
+        .then(res => res.json())
         .then(data => this.fact = data);
     }
   }
